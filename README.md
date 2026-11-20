@@ -1,48 +1,24 @@
-# MISJA AED – Dane na Ratunek (gov.pl)
+# MISJA AED – Dane na Ratunek (gov.pl) 🚨❤️
 
-Aplikacja webowa w architekturze **Vite + React + Tailwind CSS + Leaflet**, zaprojektowana zgodnie z identyfikacją wizualną serwisu **gov.pl** i wykorzystująca otwarte dane publiczne (**dane.gov.pl**).
+Aplikacja ratunkowo-edukacyjna oparta na otwartych danych publicznych (**dane.gov.pl**), która w sytuacji zagrożenia życia pomaga błyskawicznie zlokalizować najbliższy defibrylator AED oraz przeprowadzić skuteczną resuscytację krążeniowo-oddechową.
 
-## Struktura projektu
-```text
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   ├── AedMap.jsx
-│   │   ├── CprAssistant.jsx
-│   │   ├── Footer.jsx
-│   │   ├── Header.jsx
-│   │   ├── LocationBar.jsx
-│   │   ├── OpenDataPortal.jsx
-│   │   └── TargetAedCard.jsx
-│   ├── data/
-│   │   └── aedPoints.js
-│   ├── App.jsx
-│   ├── index.css
-│   └── main.jsx
-├── .gitignore
-├── .oxlintrc.json
-├── index.html
-├── package.json
-├── package-lock.json
-├── README.md
-└── vite.config.js
-```
+## 🎯 Cel projektu
+Rozwiązanie wykorzystuje potencjał otwartych danych państwowych, aby skrócić czas dotarcia do defibrylatora AED w krytycznych minutach nagłego zatrzymania krążenia (NZK) oraz przeprowadzić świadka zdarzenia krok po kroku przez procedurę ratującą życie.
 
-## Uruchomienie lokalne (krok po kroku)
-1. Rozpakuj archiwum ZIP i otwórz folder projektu w terminalu (lub VS Code).
-2. Zainstaluj zależności:
+## ✨ Główne funkcjonalności
+* **Szybka lokalizacja i nawigacja** – automatyczne wyznaczanie pozycji GPS lub wskazanie miejsca na interaktywnej mapie, obliczanie szacowanego czasu dobiegu, podgląd dokładnej mikrolokalizacji urządzenia wewnątrz budynku oraz szybkie wyznaczanie trasy w Mapach Google.
+* **Wsparcie dla drugiej osoby (QR / SMS)** – natychmiastowe generowanie kodu QR oraz gotowej wiadomości SMS z linkiem do trasy, umożliwiające błyskawiczne wysłanie innego świadka zdarzenia po defibrylator.
+* **Asystent RKO** – czytelna, krokowa instrukcja pierwszej pomocy (z podziałem na dorosłych i dzieci) wyposażona we wbudowany metronom dźwiękowy o częstotliwości **110 uderzeń/min**.
+* **Baza otwartych danych** – przeszukiwalny rejestr 44 zweryfikowanych punktów AED w Polsce z możliwością eksportu zbioru danych do formatów **GeoJSON** oraz **CSV**.
+
+## 🛠️ Technologie i dane
+* **Źródło danych:** Otwarte Dane Publiczne ([dane.gov.pl](https://dane.gov.pl))
+* **Frontend:** React / Vite, HTML5, CSS3, JavaScript
+* **Mapy i geolokalizacja:** Interaktywna mapa, integracja z Google Maps API, Web Audio API (metronom)
+
+## 💻 Uruchomienie lokalne
+Aby uruchomić projekt lokalnie na swoim komputerze:
+
+1. Sklonuj repozytorium:
    ```bash
-   npm install
-   ```
-3. Uruchom serwer deweloperski:
-   ```bash
-   npm run dev
-   ```
-4. Otwórz wyświetlony adres (domyślnie `http://localhost:5173`) w przeglądarce.
-
-## Budowanie wersji produkcyjnej (np. na GitHub Pages / Netlify / Vercel)
-```bash
-npm run build
-```
-Gotowe pliki statyczne zostaną wygenerowane w katalogu `dist/`.
+   git clone [https://github.com/kamilkowalskiii/projekty_webowe.git](https://github.com/kamilkowalskiii/projekty_webowe.git)
